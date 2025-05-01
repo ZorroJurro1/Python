@@ -1,0 +1,35 @@
+1
+graph = {'A': ['B', 'C'], 'B': ['A', 'D']}
+start = 'A'
+end = 'D'
+print(f"Edge between {start} and {end}:", end in graph.get(start, []))
+2
+cart = {}
+def add(item, price):
+    cart[item] = price
+def remove(item):
+    cart.pop(item, None)
+def update(item, price):
+    cart[item] = price
+def total():
+    print("Total:", sum(cart.values()))
+
+while True:
+    print("\n1.Add 2.Remove 3.Update 4.Total 5.Exit")
+    ch = int(input("Enter choice: "))
+    if ch == 5:
+        break
+    elif ch == 1:
+        i = input("Item: ")
+        p = float(input("Price: "))
+        add(i, p)
+    elif ch == 2:
+        i = input("Item: ")
+        remove(i)
+    elif ch == 3:
+        i = input("Item: ")
+        p = float(input("New price: "))
+        update(i, p)
+    elif ch == 4:
+        total()
+
