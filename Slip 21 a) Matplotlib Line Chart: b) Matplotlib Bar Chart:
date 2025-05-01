@@ -1,0 +1,21 @@
+1
+import matplotlib.pyplot as plt
+
+x = [1, 2, 3, 4]
+y = [2, 4, 6, 8]
+
+plt.plot(x, y, marker='o')
+plt.title("Line Chart")
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.grid(True)
+plt.show()
+2
+subjects = ['Math', 'Science', 'English']
+marks = [85, 90, 78]
+
+plt.bar(subjects, marks, color='skyblue')
+plt.title("Subject-wise Marks")
+plt.xlabel("Subjects")
+plt.ylabel("Marks")
+plt.show()
