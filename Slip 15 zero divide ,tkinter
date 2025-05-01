@@ -1,0 +1,35 @@
+1
+# Divide by zero
+try:
+    a = int(input("Enter number: "))
+    b = int(input("Enter divisor: "))
+    print("Result:", a / b)
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+except ValueError:
+    print("Invalid input")
+2
+# Tkinter GUI
+import tkinter as tk
+
+def add():
+    result.set(str(int(e1.get()) + int(e2.get())))
+
+def reset():
+    e1.delete(0, 'end')
+    e2.delete(0, 'end')
+    result.set("")
+
+root = tk.Tk()
+root.title("Add Two Numbers")
+
+e1 = tk.Entry(root)
+e2 = tk.Entry(root)
+e1.pack()
+e2.pack()
+
+result = tk.StringVar()
+tk.Button(root, text="Add", command=add).pack()
+tk.Button(root, text="Reset", command=reset).pack()
+tk.Label(root, textvariable=result).pack()
+root.mainloop()
