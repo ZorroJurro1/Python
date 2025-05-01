@@ -1,0 +1,23 @@
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5)+1):
+        if n % i == 0:
+            return False
+    return True
+
+def smart_divide(func):
+    def inner(a, b):
+        if b == 0:
+            print("Cannot divide by zero")
+        else:
+            return func(a, b)
+    return inner
+
+@smart_divide
+def divide(a, b):
+    return a / b
+
+# Example usage
+print("Is 7 prime?", is_prime(7))
+print("Divide:", divide(10, 2))
