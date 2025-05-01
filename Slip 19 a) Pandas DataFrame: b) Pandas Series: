@@ -1,0 +1,16 @@
+1
+import pandas as pd
+
+data = {
+    "Roll No": [1, 2, 3],
+    "Name": ["A", "B", "C"],
+    "Marks": [80, 85, 90]
+}
+
+df = pd.DataFrame(data)
+print(df)
+2
+import pandas as pd
+
+s = pd.Series([10, 20, 30, 40])
+print(s)
