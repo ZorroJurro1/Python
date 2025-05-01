@@ -1,0 +1,11 @@
+def even_gen(limit):
+    for i in range(0, limit+1, 2):
+        yield i
+
+for num in even_gen(10):
+    print(num, end=' ')
+
+def check_even(n):
+    return "Even" if n % 2 == 0 else "Odd"
+
+print("\n", check_even(5))
