@@ -1,0 +1,27 @@
+1
+import sqlite3
+
+conn = sqlite3.connect('college.db')
+cur = conn.cursor()
+
+cur.execute('''CREATE TABLE IF NOT EXISTS student (
+    rollno INTEGER PRIMARY KEY,
+    name TEXT,
+    age INTEGER
+)''')
+
+cur.execute("INSERT INTO student VALUES (1, 'Amit', 20)")
+cur.execute("INSERT INTO student VALUES (2, 'Priya', 21)")
+conn.commit()
+
+for row in cur.execute("SELECT * FROM student"):
+    print(row)
+
+conn.close()
+2
+try:
+    x = int(input("Enter numerator: "))
+    y = int(input("Enter denominator: "))
+    print("Result:", x / y)
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
