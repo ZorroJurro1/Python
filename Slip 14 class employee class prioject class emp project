@@ -1,0 +1,23 @@
+class Employee:
+    def __init__(self, name, desig):
+        self.name = name
+        self.desig = desig
+
+class Project:
+    def __init__(self, pid, title):
+        self.pid = pid
+        self.title = title
+
+class Emp_Proj(Employee, Project):
+    def __init__(self, name, desig, pid, title, duration):
+        Employee.__init__(self, name, desig)
+        Project.__init__(self, pid, title)
+        self.duration = duration
+
+projects = [
+    Emp_Proj("A", "Manager", 1, "AI", 12),
+    Emp_Proj("B", "Dev", 2, "Web", 6)
+]
+
+for p in sorted(projects, key=lambda x: x.duration):
+    print(p.title, p.duration)
