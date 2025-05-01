@@ -1,0 +1,7 @@
+nums = [int(input("Enter number: ")) for _ in range(10)]
+print("Reverse:", nums[::-1])
+print("Max:", max(nums), "Min:", min(nums))
+updated = [x + 5 for x in nums]
+print("After adding 5:", updated)
+filtered = [x for x in updated if x % 2 != 0]
+print("After removing even numbers:", filtered)
