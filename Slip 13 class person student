@@ -1,0 +1,20 @@
+class Person:
+    def __init__(self, name, address, age, gender):
+        self.name = name
+        self.address = address
+        self.age = age
+        self.gender = gender
+
+class Student(Person):
+    def __init__(self, name, address, age, gender, class_enrolled, SRN, percentage):
+        super().__init__(name, address, age, gender)
+        self.class_enrolled = class_enrolled
+        self.SRN = SRN
+        self.percentage = percentage
+
+students = []
+students.append(Student("Gaurav", "Delhi", 20, "M", "BSc", "SRN001", 85))
+students.append(Student("Anjali", "Mumbai", 21, "F", "BSc", "SRN002", 92))
+
+for s in sorted(students, key=lambda x: x.percentage):
+    print(s.name, s.percentage)
