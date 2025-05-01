@@ -1,0 +1,15 @@
+1
+student = {"Name": "Gaurav", "Age": 21, "Marks": 89}
+print("All keys:", student.keys())
+print("All values:", student.values())
+print("Name:", student.get("Name"))
+student["Age"] = 22
+print("Updated:", student)
+2
+def multiply(*nums):
+    result = 1
+    for n in nums:
+        result *= n
+    print("Product:", result)
+
+multiply(2, 3, 4)
