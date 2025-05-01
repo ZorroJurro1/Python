@@ -1,0 +1,38 @@
+1
+# Program to evaluate 2x²y + 3x³y² + 6
+x = float(input("Enter value of x: "))
+y = float(input("Enter value of y: "))
+
+result = 2 * x**2 * y + 3 * x**3 * y**2 + 6
+print("Result of 2x²y + 3x³y² + 6 is:", result)
+2
+def menu():
+    print("\nMenu")
+    print("1. Addition")
+    print("2. Subtraction")
+    print("3. Multiplication")
+    print("4. Division")
+    print("5. Exit")
+
+while True:
+    menu()
+    choice = int(input("Enter your choice: "))
+    if choice == 5:
+        print("Exiting program.")
+        break
+    a = float(input("Enter first number: "))
+    b = float(input("Enter second number: "))
+
+    if choice == 1:
+        print("Sum =", a + b)
+    elif choice == 2:
+        print("Difference =", a - b)
+    elif choice == 3:
+        print("Product =", a * b)
+    elif choice == 4:
+        if b != 0:
+            print("Quotient =", a / b)
+        else:
+            print("Cannot divide by zero")
+    else:
+        print("Invalid choice")
