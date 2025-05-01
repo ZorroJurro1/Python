@@ -1,0 +1,11 @@
+cities = ["Delhi", "Pune", "Bhopal", "Patna"]
+cities.append("Mumbai")
+cities.insert(1, "Chennai")
+print("Alternate cities:", cities[::2])
+print("Cities starting with P:", [c for c in cities if c.startswith('P')])
+cities.remove("Patna")
+print("Updated cities:", cities)
+
+numbers = [1, 2, 3, 4]
+updated = [x + 10 for x in numbers]
+print("Updated numbers:", updated)
